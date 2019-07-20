@@ -1,13 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import './index.css';
-//import App from './App';
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import { BrowserRouter, Route } from "react-router-dom";
 import RootPage from "./pages/RootPage";
 import LoginPage from "./pages/LoginPage";
-import MainPage from "./MainPage";
 import configureStore from "./store";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import theme from "./asset/theme";
@@ -24,7 +21,6 @@ ReactDOM.render(
         <div>
           <Route exact path="/" component={RootPage} />
           <Route exact path="/Login/" component={LoginPage} />
-          <Route exact path="/Main/" component={MainPage} />
         </div>
       </BrowserRouter>
     </Provider>

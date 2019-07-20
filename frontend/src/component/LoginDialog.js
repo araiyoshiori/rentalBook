@@ -25,12 +25,6 @@ class LoginDialog extends Component {
   handleExe = () => {
     const loginData = this.state.loginData;
     this.props.exeLogin(loginData);
-    // console.log("exe", this.props.user);
-    // if (this.props.user) {
-    //   this.handleClose();
-    // } else {
-    //   this.setState({ error: true });
-    // }
   };
   handleClose = () => {
     this.setState({ open: false });
@@ -43,10 +37,11 @@ class LoginDialog extends Component {
   };
   render() {
     const { classes } = this.props;
+    // todo
+    // メッセージはreduserに移動したい
     let errorMessage = this.props.error
       ? "※メールアドレスまたはパスワードが正しくありません。"
       : "";
-    console.log("user", this.props.user !== "");
     return (
       <div>
         <Button
@@ -89,7 +84,7 @@ class LoginDialog extends Component {
               onClick={this.handleClose}
             >
               <Typography color="secondary" className={classes.button}>
-                キャンセル
+                戻る
               </Typography>
             </Button>
             <Button
@@ -111,9 +106,7 @@ class LoginDialog extends Component {
 const styles = theme => ({
   dialogTitle: {
     background: "#009688",
-    "& h2": {
-      color: "white"
-    }
+    color: "white"
   },
   title: {
     color: theme.palette.primary.main

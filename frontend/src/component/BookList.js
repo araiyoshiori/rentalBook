@@ -5,24 +5,13 @@ import {
   CardMedia,
   Checkbox,
   Collapse,
-  Card,
-  CardActionArea,
-  CardContent,
-  Grid,
-  Divider,
-  IconButton,
-  Link,
   Paper,
   Table,
   TableBody,
   TableCell,
   TableHead,
-  Typography,
-  CardHeader,
   TableRow
 } from "@material-ui/core/";
-import { ExpandLess, ExpandMore } from "@material-ui/icons/";
-import { contents } from "./contents";
 
 class BookList extends Component {
   state = {
@@ -142,109 +131,6 @@ class BookList extends Component {
             </div>
           </Paper>
         </Collapse>
-        <contents />
-        <div>
-          <Button
-            variant="contained"
-            className={classes.button}
-            onClick={this.handleExpandClick}
-          >
-            {this.state.expanded ? "非表示" : "表示"}
-          </Button>
-          <Button variant="contained" className={classes.button}>
-            history
-          </Button>
-        </div>
-        <IconButton
-          onClick={this.handleExpandClick}
-          aria-expanded={this.state.expanded}
-          aria-label="Show more"
-        >
-          {this.state.expanded ? <ExpandLess /> : <ExpandMore />}
-        </IconButton>
-        <Paper className={classes.paper2}>
-          <Grid container direction="row" spacing={5}>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={4}
-              className={classes.gridItem}
-              alignContent="space-between"
-            >
-              <Card className={classes.card}>
-                <CardActionArea
-                  onClick={() =>
-                    (window.location.href = "https://www.google.com/")
-                  }
-                >
-                  <CardHeader
-                    className={classes.cardHead}
-                    title={<Link className={classes.link}>Google</Link>}
-                  />
-                  <Divider />
-                  <CardContent className={classes.cardContent}>
-                    ああああああああああああああああああああああああ
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Card className={classes.card}>
-                <CardActionArea
-                  onClick={() =>
-                    (window.location.href = "https://www.yahoo.co.jp/")
-                  }
-                >
-                  <CardHeader
-                    className={classes.cardHead}
-                    title={<Link className={classes.link}>Yahoo</Link>}
-                  />
-                  <Divider />
-                  <CardContent className={classes.cardContent}>
-                    いいいいいいいいいいいいいいいいいいいいいいいいい
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Card className={classes.card}>
-                <CardActionArea
-                  onClick={() =>
-                    (window.location.href = "https://www.goo.ne.jp/")
-                  }
-                >
-                  <CardHeader
-                    className={classes.cardHead}
-                    title={<Link className={classes.link}>Goo</Link>}
-                  />
-                  <Divider />
-                  <CardContent className={classes.cardContent}>
-                    ううううううううううううううううううううううううう
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Card className={classes.card}>
-                <CardActionArea
-                  onClick={() =>
-                    (window.location.href = "https://www.bing.com/")
-                  }
-                >
-                  <CardHeader
-                    className={classes.cardHead}
-                    title={<Link className={classes.link}>Bing</Link>}
-                  />
-                  <Divider />
-                  <CardContent className={classes.cardContent}>
-                    えええええええええええええええええええええええええ
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Grid>
-          </Grid>
-        </Paper>
       </div>
     );
   }

@@ -7,8 +7,8 @@ import {
   storeUserAction,
   storeErrorAction
 } from "../Action";
-import { getBookList, patchBookStatusList } from "../API/Books";
-import { getUser } from "../API/Users";
+import { getBookList, patchBookStatusList } from "../api/Books";
+import { getUser } from "../api/Users";
 
 function* runExeDisplayList(action) {
   const { payload, error } = yield call(getBookList, action.payload);
