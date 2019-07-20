@@ -1,0 +1,6 @@
+backend/backend/*.pyc
+backend/backend/__pycache__/*.pyc
+backend/bookrental/*.pyc
+backend/bookrental/__pycache__/*.pyc
+backend/bookrental/migrations/*.pyc
+backend/bookrental/migrations/__pycache__/*.pyc
